@@ -10,3 +10,15 @@ soundcloudCassette.on('ready', function(){
 	soundcloudCasstte.play();
 });
 ```
+
+## Events
+
+### Ready:
+- Soundcloud: **SC.Widget.Events.READY**
+
+## API
+
+### Play:
+As described on box.
+
+`cassette.play();`
