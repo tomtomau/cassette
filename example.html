@@ -5,17 +5,29 @@
 </head>
 <body>
 
-<iframe class="cassette" id="player-1" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/1539950/favorites" width="100%" height="465" scrolling="no" frameborder="no"></iframe>
+<iframe class="cassette" id="player-1"
+        src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/1539950/favorites" width="100%"
+        height="465" scrolling="no" frameborder="no"></iframe>
 <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-<script src="cassette.js"></script>
+<script src="dist/cassette.js"></script>
 <script type="text/javascript">
-    (function(){
+    (function () {
         var widgetIframe = document.getElementById('player-1');
 
-        var cassette = new Cassette(widgetIframe, 'soundcloud');
-        cassette.on('ready', function(){
-            cassette.play();
-        });
+        var cassette = new SoundcloudCassette(widgetIframe);
+        cassette
+                .on('PLAY', function () {
+                    console.log("I have been started! I will wait 2 seconds then pause");
+                    window.setTimeout(function(){
+                        cassette.pause();
+                    }, 2000)
+                })
+
+                .on('READY', function () {
+                    console.log("Player is ready, so I will start it");
+                    cassette.play();
+                })
+        ;
     }());
 </script>
 </body>
