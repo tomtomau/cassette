@@ -76,12 +76,14 @@ class SoundcloudCassette extends Cassette {
     play() {
         // Do something
         this.widget.play();
+
         return this;
     }
 
     pause() {
         // Do something
         this.widget.pause();
+        
         return this;
     }
 }

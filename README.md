@@ -22,3 +22,4 @@ soundcloudCassette.on('ready', function(){
 As described on box.
 
 `cassette.play();`
+`cassette.pause();`
