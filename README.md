@@ -1,5 +1,5 @@
 # Cassette.js
-A platform agnostic wrapper around common audio web embeds. Suggest features in GitHub issues!
+A platform agnostic wrapper around common audio web/video embeds. Suggest features in GitHub issues!
 
 ```
 var soundcloudFrame = document.getElementById("soundcloud-frame"),
@@ -10,6 +10,10 @@ soundcloudCassette.on('ready', function(){
 	soundcloudCasstte.play();
 });
 ```
+
+## Supported Cassettes:
+- SoundCloud
+- YouTube
 
 ## Events
 
